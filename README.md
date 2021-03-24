@@ -8,5 +8,5 @@ We collected the data along with user profile.
 All of them are hand-labeled with suicidal tendency.  
 
 ### Coding
-The data_collection.ipynb file do the initial data crawling from twitter.com using twint.  
-The preprocessing.ipynb file transform the data into machine-learning-friendly mode.  
+The data_collection.ipynb file does the initial data crawling from twitter.com using twint.  
+The preprocessing.ipynb file transforms the data into machine-learning-friendly mode.  
