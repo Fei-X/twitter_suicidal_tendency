@@ -19,9 +19,9 @@ def threshold(y_pred_proba, y_test):
             beta = BETA
         )
     
-    if f_beta > f_beta_opt:
-        t_opt = t
-        f_beta_opt = f_beta
+        if f_beta > f_beta_opt:
+            t_opt = t
+            f_beta_opt = f_beta
     
     y_pred = (y_pred_proba[:,1] > t_opt).astype(int)
     return {'threshold': t_opt, 'score': f_beta_opt, 'y_pred': y_pred}
