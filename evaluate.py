@@ -28,13 +28,13 @@ def threshold(y_pred_proba, y_test):
 
 def performance(y_test, y_pred):
     report = """
-The evaluation report of Classification is:
+The evaluation report of classification is:
 Confusion Matrix:
 {}
 Accuracy: {}
 Precision: {}
 Recall: {}
-F1 Score: {}
+F2 Score: {}
 AUC Score: {}
 """.format(metrics.confusion_matrix(y_test, y_pred),
            metrics.accuracy_score(y_test, y_pred),
