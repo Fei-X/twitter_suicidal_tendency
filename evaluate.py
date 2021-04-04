@@ -26,7 +26,7 @@ def threshold(y_pred_proba, y_test):
     y_pred = (y_pred_proba[:,1] > t_opt).astype(int)
     return {'threshold': t_opt, 'score': f_beta_opt, 'y_pred': y_pred}
 
-def performance(y_test, y_pred):
+def performance(y_test, y_pred, y_pred_proba):
     report = """
 The evaluation report of classification is:
 Confusion Matrix:
@@ -41,7 +41,7 @@ AUC Score: {}
            metrics.precision_score(y_test, y_pred),
            metrics.recall_score(y_test, y_pred),
            metrics.fbeta_score(y_test, y_pred, beta = BETA),
-           metrics.roc_auc_score(y_test, y_pred))
+           metrics.roc_auc_score(y_test, y_pred_proba))
     return {
         'report': report,
         'cm': metrics.confusion_matrix(y_test, y_pred),
