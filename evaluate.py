@@ -41,7 +41,7 @@ AUC Score: {}
            metrics.precision_score(y_test, y_pred),
            metrics.recall_score(y_test, y_pred),
            metrics.fbeta_score(y_test, y_pred, beta = BETA),
-           metrics.roc_auc_score(y_test, y_pred_proba))
+           metrics.roc_auc_score(y_test, y_pred_proba[:,1]))
     return {
         'report': report,
         'cm': metrics.confusion_matrix(y_test, y_pred),
